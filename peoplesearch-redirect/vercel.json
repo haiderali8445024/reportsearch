@@ -2,24 +2,9 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/credit",
-      "destination": "https://YOUR-CREDIT-AFFILIATE-LINK.com",
-      "permanent": true
-    },
-    {
-      "source": "/score",
-      "destination": "https://YOUR-SCORE-AFFILIATE-LINK.com",
-      "permanent": true
-    },
-    {
       "source": "/background",
-      "destination": "https://YOUR-BACKGROUND-AFFILIATE-LINK.com",
-      "permanent": true
-    },
-    {
-      "source": "/check",
-      "destination": "https://YOUR-BACKGROUND-AFFILIATE-LINK.com",
-      "permanent": true
+      "destination": "https://www.wqqlm8trk.com/68FS5P/D42TT/?sub1=FB",
+      "statusCode": 308
     }
   ]
 }
