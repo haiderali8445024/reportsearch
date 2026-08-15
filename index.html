@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex,nofollow">
 
-  <title>Secure Search Gateway</title>
+  <title>ScoreView — Secure Gateway</title>
 
   <style>
     * {
@@ -16,7 +16,7 @@
 
     :root {
       --bg: #070707;
-      --card: rgba(20, 20, 20, .82);
+      --card: rgba(20,20,20,.84);
       --border: rgba(255,255,255,.10);
       --text: #f7f7f7;
       --muted: #9b9b9b;
@@ -37,17 +37,17 @@
     body::before {
       content: "";
       position: fixed;
-      width: 500px;
-      height: 500px;
-      top: -220px;
+      width: 560px;
+      height: 560px;
+      top: -250px;
       left: 50%;
       transform: translateX(-50%);
       background: radial-gradient(
         circle,
-        rgba(255,255,255,.10),
+        rgba(255,255,255,.11),
         transparent 65%
       );
-      filter: blur(30px);
+      filter: blur(35px);
       pointer-events: none;
     }
 
@@ -63,15 +63,15 @@
     }
 
     .card {
-      width: min(100%, 480px);
+      width: min(100%, 490px);
       position: relative;
       padding: 48px 38px 38px;
       text-align: center;
       border: 1px solid var(--border);
       border-radius: 30px;
       background: var(--card);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
       box-shadow:
         0 35px 100px rgba(0,0,0,.55),
         inset 0 1px 0 rgba(255,255,255,.05);
@@ -126,37 +126,44 @@
     }
 
     @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
     }
 
-    .shield {
-      width: 36px;
-      height: 41px;
+    .score-icon {
+      width: 43px;
+      height: 43px;
+      border: 3px solid #fff;
+      border-radius: 50%;
       position: relative;
-      background: #fff;
-      clip-path: polygon(
-        50% 0,
-        92% 15%,
-        88% 58%,
-        70% 82%,
-        50% 100%,
-        30% 82%,
-        12% 58%,
-        8% 15%
-      );
     }
 
-    .shield::after {
+    .score-icon::before {
       content: "";
       position: absolute;
-      width: 13px;
-      height: 7px;
-      left: 10px;
-      top: 14px;
-      border-left: 3px solid #111;
-      border-bottom: 3px solid #111;
+      width: 21px;
+      height: 3px;
+      background: #fff;
+      left: 9px;
+      bottom: 8px;
+      border-radius: 5px;
       transform: rotate(-45deg);
+    }
+
+    .score-icon::after {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background: #fff;
+      border-radius: 50%;
+      right: 6px;
+      top: 6px;
     }
 
     .label {
@@ -169,9 +176,9 @@
     }
 
     h1 {
-      font-size: clamp(27px, 7vw, 35px);
+      font-size: clamp(28px, 7vw, 36px);
       line-height: 1.1;
-      letter-spacing: -1.2px;
+      letter-spacing: -1.3px;
       margin-bottom: 15px;
     }
 
@@ -179,7 +186,7 @@
       color: var(--muted);
       font-size: 15px;
       line-height: 1.65;
-      max-width: 365px;
+      max-width: 370px;
       margin: auto;
     }
 
@@ -204,8 +211,15 @@
     }
 
     @keyframes pulse {
-      0%,100% { opacity: .35; transform: scale(.8); }
-      50% { opacity: 1; transform: scale(1); }
+      0%,100% {
+        opacity: .35;
+        transform: scale(.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     .progress {
@@ -232,16 +246,6 @@
       letter-spacing: .4px;
     }
 
-    .continue {
-      display: inline-block;
-      margin-top: 20px;
-      color: #ddd;
-      font-size: 12px;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      cursor: pointer;
-    }
-
     .hidden {
       display: none !important;
     }
@@ -251,15 +255,20 @@
       margin-bottom: 20px;
     }
 
-    .blocked h1 {
-      color: #fff;
-    }
-
     .error {
       color: #aaa;
       font-size: 13px;
       line-height: 1.6;
       margin-top: 15px;
+    }
+
+    .retry {
+      display: inline-block;
+      margin-top: 20px;
+      color: #ddd;
+      font-size: 12px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
     @media (max-width: 480px) {
@@ -275,29 +284,35 @@
 
   <div class="grid"></div>
 
-  <!-- Loading / checking screen -->
+  <!-- Main screen -->
   <main class="card" id="loadingScreen">
 
     <div class="brand">
       <span class="brand-dot"></span>
-      Secure Gateway
+      ScoreView
     </div>
 
     <div class="icon">
-      <div class="shield"></div>
+      <div class="score-icon"></div>
     </div>
 
-    <div class="label">Background Search</div>
+    <div class="label">
+      Credit Score
+    </div>
 
-    <h1>Preparing Your Search</h1>
+    <h1>
+      Preparing Your Score Check
+    </h1>
 
     <p class="description">
-      We're checking your connection before continuing to our background search partner.
+      We're checking your connection before continuing to your credit score experience.
     </p>
 
     <div class="status">
       <span class="status-dot"></span>
-      <span id="statusText">Checking connection...</span>
+      <span id="statusText">
+        Checking connection...
+      </span>
     </div>
 
     <div class="progress">
@@ -305,25 +320,31 @@
     </div>
 
     <div class="secure">
-      Connection screening • Secure gateway
+      Secure gateway • Please wait a moment
     </div>
 
   </main>
 
 
   <!-- Block screen -->
-  <main class="card blocked hidden" id="blockedScreen">
+  <main class="card hidden" id="blockedScreen">
 
     <div class="brand">
       <span class="brand-dot"></span>
-      Secure Gateway
+      ScoreView
     </div>
 
-    <div class="blocked-icon">⚠</div>
+    <div class="blocked-icon">
+      ⚠
+    </div>
 
-    <div class="label">Access Restricted</div>
+    <div class="label">
+      Access Restricted
+    </div>
 
-    <h1>Connection Not Supported</h1>
+    <h1>
+      Connection Not Supported
+    </h1>
 
     <p class="description">
       Please disable your VPN or proxy connection and try again.
@@ -339,21 +360,27 @@
 
     <div class="brand">
       <span class="brand-dot"></span>
-      Secure Gateway
+      ScoreView
     </div>
 
-    <div class="blocked-icon">!</div>
+    <div class="blocked-icon">
+      !
+    </div>
 
-    <div class="label">Connection Error</div>
+    <div class="label">
+      Connection Error
+    </div>
 
-    <h1>Unable to Continue</h1>
+    <h1>
+      Unable to Continue
+    </h1>
 
     <p class="description">
       We couldn't verify your connection. Please try again in a moment.
     </p>
 
     <a
-      class="continue"
+      class="retry"
       href="javascript:location.reload()"
     >
       Try Again
@@ -363,8 +390,13 @@
 
 
   <script>
+
+    /*
+      CREDIT SCORE DESTINATION
+    */
     const destination =
-      "https://www.wqqlm8trk.com/68FS5P/D42TT/?sub1=FB";
+      "https://scoreview.online";
+
 
     const loadingScreen =
       document.getElementById("loadingScreen");
@@ -392,7 +424,9 @@
         statusText.textContent =
           "Checking connection...";
 
-        progressBar.style.width = "20%";
+        progressBar.style.width =
+          "20%";
+
 
         const response =
           await fetch("/api/check-ip", {
@@ -403,63 +437,111 @@
             }
           });
 
-        progressBar.style.width = "55%";
+
+        progressBar.style.width =
+          "55%";
+
 
         if (!response.ok) {
-          throw new Error("IP verification failed");
+          throw new Error(
+            "Connection verification failed"
+          );
         }
+
 
         const result =
           await response.json();
 
+
+        /*
+          VPN / PROXY BLOCK
+        */
         if (!result.allowed) {
 
-          progressBar.style.width = "100%";
+          progressBar.style.width =
+            "100%";
 
-          loadingScreen.classList.add("hidden");
+          loadingScreen.classList.add(
+            "hidden"
+          );
 
           if (result.reason) {
             blockReason.textContent =
               result.reason;
           }
 
-          blockedScreen.classList.remove("hidden");
+          blockedScreen.classList.remove(
+            "hidden"
+          );
 
           return;
         }
 
+
+        /*
+          CONNECTION PASSED
+        */
         statusText.textContent =
           "Connection verified...";
 
-        progressBar.style.width = "75%";
+        progressBar.style.width =
+          "72%";
+
 
         setTimeout(() => {
 
           statusText.textContent =
             "Preparing secure redirect...";
 
-          progressBar.style.width = "100%";
+          progressBar.style.width =
+            "88%";
 
-        }, 500);
+        }, 600);
+
 
         setTimeout(() => {
 
-          window.location.replace(destination);
+          statusText.textContent =
+            "Almost ready...";
+
+          progressBar.style.width =
+            "100%";
+
+        }, 1400);
+
+
+        /*
+          REDIRECT
+        */
+        setTimeout(() => {
+
+          window.location.replace(
+            destination
+          );
 
         }, 3000);
 
-      } catch (error) {
+      }
+
+      catch (error) {
 
         console.error(error);
 
-        loadingScreen.classList.add("hidden");
+        loadingScreen.classList.add(
+          "hidden"
+        );
 
-        errorScreen.classList.remove("hidden");
+        errorScreen.classList.remove(
+          "hidden"
+        );
 
       }
+
     }
 
+
     checkConnection();
+
   </script>
 
 </body>
