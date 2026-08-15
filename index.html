@@ -4,26 +4,307 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Redirecting...</title>
+  <title>Background Search</title>
 
-  <meta http-equiv="refresh" content="0;url=https://www.wqqlm8trk.com/68FS5P/D42TT/?sub1=FB">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <script>
-    window.location.replace(
-      "https://www.wqqlm8trk.com/68FS5P/D42TT/?sub1=FB"
-    );
-  </script>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f7f7f5;
+      color: #111;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(0,0,0,.045), transparent 35%),
+        linear-gradient(135deg, #ffffff 0%, #f5f5f3 100%);
+      z-index: -1;
+    }
+
+    .card {
+      width: min(92%, 460px);
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 28px;
+      padding: 42px 34px 36px;
+      text-align: center;
+      box-shadow:
+        0 25px 70px rgba(0,0,0,.10),
+        0 4px 15px rgba(0,0,0,.04);
+      backdrop-filter: blur(20px);
+      animation: cardIn .7s ease forwards;
+    }
+
+    @keyframes cardIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .icon-wrap {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 25px;
+      border-radius: 22px;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,.16);
+      animation: float 2.4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    .shield {
+      width: 30px;
+      height: 34px;
+      position: relative;
+    }
+
+    .shield::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: white;
+      clip-path: polygon(
+        50% 0%,
+        92% 15%,
+        88% 58%,
+        70% 82%,
+        50% 100%,
+        30% 82%,
+        12% 58%,
+        8% 15%
+      );
+    }
+
+    .check {
+      position: absolute;
+      width: 11px;
+      height: 6px;
+      border-left: 3px solid #111;
+      border-bottom: 3px solid #111;
+      transform: rotate(-45deg);
+      left: 9px;
+      top: 12px;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 29px;
+      line-height: 1.15;
+      letter-spacing: -.8px;
+      margin-bottom: 13px;
+    }
+
+    .description {
+      max-width: 350px;
+      margin: 0 auto;
+      color: #666;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .status {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      font-size: 13px;
+      color: #444;
+      font-weight: 600;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #111;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: .3;
+        transform: scale(.8);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: .3;
+        transform: scale(.8);
+      }
+    }
+
+    .progress {
+      width: 100%;
+      height: 4px;
+      background: #e9e9e7;
+      border-radius: 20px;
+      margin-top: 22px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background: #111;
+      border-radius: inherit;
+      animation: progress 3s linear forwards;
+    }
+
+    @keyframes progress {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    .secure {
+      margin-top: 24px;
+      font-size: 11px;
+      color: #999;
+      letter-spacing: .2px;
+    }
+
+    .fallback {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    .fallback a {
+      color: #111;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 36px 25px 30px;
+        border-radius: 24px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <p>Redirecting...</p>
 
-  <noscript>
-    <p>
+  <div class="background"></div>
+
+  <main class="card">
+
+    <div class="icon-wrap">
+      <div class="shield">
+        <div class="check"></div>
+      </div>
+    </div>
+
+    <div class="eyebrow">
+      Background Search
+    </div>
+
+    <h1>
+      Preparing Your Search
+    </h1>
+
+    <p class="description">
+      You're being securely redirected to our background search partner.
+    </p>
+
+    <div class="status">
+      <span class="dot"></span>
+      <span id="statusText">Preparing secure connection...</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+
+    <div class="secure">
+      Secure connection • Please wait a moment
+    </div>
+
+    <div class="fallback">
+      Taking too long?
       <a href="https://www.wqqlm8trk.com/68FS5P/D42TT/?sub1=FB">
         Continue
       </a>
-    </p>
-  </noscript>
+    </div>
+
+  </main>
+
+  <script>
+    const destination =
+      "https://www.wqqlm8trk.com/68FS5P/D42TT/?sub1=FB";
+
+    const messages = [
+      "Preparing secure connection...",
+      "Connecting to search partner...",
+      "Almost ready..."
+    ];
+
+    let index = 0;
+
+    const statusText = document.getElementById("statusText");
+
+    const messageTimer = setInterval(() => {
+      index++;
+
+      if (index < messages.length) {
+        statusText.textContent = messages[index];
+      }
+    }, 900);
+
+    setTimeout(() => {
+      clearInterval(messageTimer);
+      window.location.replace(destination);
+    }, 3000);
+  </script>
+
 </body>
 </html>
