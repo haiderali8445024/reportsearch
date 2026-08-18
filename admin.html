@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - ReportSearch</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+<div class="flex min-h-screen">
+  <div class="w-64 bg-slate-900 text-white p-5">
+    <div class="font-bold text-xl mb-8"><i class="fa-solid fa-lock mr-2"></i> Admin Panel</div>
+    <div class="space-y-2 text-sm">
+      <div class="bg-white/10 p-3 rounded-lg"><i class="fa-solid fa-table-columns mr-2"></i> Dashboard</div>
+      <div class="p-3 text-white/60">reportsearch.online/admin.html</div>
+      <div class="mt-6 text-xs text-white/40">This admin is private. Not linked on main site.</div>
+    </div>
+  </div>
+  <div class="flex-1 p-8">
+    <h1 class="text-2xl font-bold">Create New Blog Post</h1>
+    <p class="text-sm text-gray-500 mt-1">Ye post main page /blog/ me alag link ke sath show hoga. Main page par admin ka link nahi ayega.</p>
+    
+    <div class="bg-white border rounded-2xl p-6 mt-6 max-w-3xl">
+      <div class="grid gap-4">
+        <div><label class="text-xs font-bold">Title</label><input id="title" class="w-full border rounded-lg p-3 mt-1" placeholder="e.g. How to Check Tenant Credit Report"></div>
+        <div class="grid grid-cols-2 gap-4">
+          <div><label class="text-xs font-bold">Slug (auto)</label><input id="slug" class="w-full border rounded-lg p-3 mt-1 bg-gray-50"></div>
+          <div><label class="text-xs font-bold">Category</label><select id="cat" class="w-full border rounded-lg p-3 mt-1"><option>Background Checks</option><option>Credit Checks</option><option>Reviews</option><option>Guides</option></select></div>
+        </div>
+        <div><label class="text-xs font-bold">Short Description</label><textarea id="excerpt" class="w-full border rounded-lg p-3 mt-1" rows="2"></textarea></div>
+        <div><label class="text-xs font-bold">Full Content</label><textarea id="content" class="w-full border rounded-lg p-3 mt-1" rows="6" placeholder="Article content..."></textarea></div>
+        <div class="grid grid-cols-2 gap-4">
+          <div><label class="text-xs font-bold">Offer (e.g. 50% OFF)</label><input id="offer" class="w-full border rounded-lg p-3 mt-1"></div>
+          <div><label class="text-xs font-bold">Affiliate Link</label><input id="link" class="w-full border rounded-lg p-3 mt-1" placeholder="https://..."></div>
+        </div>
+        <button onclick="savePost()" class="bg-slate-900 text-white py-3 rounded-full font-bold mt-2"><i class="fa-solid fa-floppy-disk mr-2"></i> Publish Post</button>
+      </div>
+    </div>
+
+    <div class="bg-white border rounded-2xl p-6 mt-8">
+      <h3 class="font-bold">All Posts</h3>
+      <div id="list" class="mt-4 space-y-2"></div>
+    </div>
+
+    <div class="mt-8 bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-sm">
+      <b>GitHub Push Kaise Kare:</b><br>
+      1. Is admin me post save karo<br>
+      2. Neeche list se Copy HTML karo<br>
+      3. GitHub me /blog/{slug}/index.html file banao aur paste karo<br>
+      4. Push -> Vercel auto live. Main page par admin ka link kabhi nahi ayega.
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById('title').addEventListener('input', e=>{
+  document.getElementById('slug').value = e.target.value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+});
+function savePost(){
+  const post = {
+    title: document.getElementById('title').value,
+    slug: document.getElementById('slug').value,
+    category: document.getElementById('cat').value,
+    excerpt: document.getElementById('excerpt').value,
+    content: document.getElementById('content').value,
+    offer: document.getElementById('offer').value,
+    link: document.getElementById('link').value,
+    date: new Date().toLocaleDateString()
+  };
+  if(!post.title || !post.slug) return alert('Title required');
+  const all = JSON.parse(localStorage.getItem('rs_posts')||'[]');
+  all.unshift(post);
+  localStorage.setItem('rs_posts', JSON.stringify(all));
+  alert('Post Published! Ab main page par dikhega.');
+  render();
+}
+function render(){
+  const all = JSON.parse(localStorage.getItem('rs_posts')||'[]');
+  const list = document.getElementById('list');
+  list.innerHTML = all.map((p,i)=>`<div class="flex justify-between items-center border p-3 rounded-lg"><div><div class="font-bold text-sm">${p.title}</div><div class="text-xs text-gray-500">/blog/${p.slug}/ - ${p.date} - Offer: ${p.offer}</div></div><div class="flex gap-2"><button onclick="copyHTML(${i})" class="text-xs bg-gray-100 px-3 py-1 rounded-full">Copy HTML</button><button onclick="del(${i})" class="text-xs bg-red-50 text-red-600 px-3 py-1 rounded-full">Delete</button></div></div>`).join('') || '<div class="text-sm text-gray-400">No posts yet</div>';
+}
+function del(i){ const all=JSON.parse(localStorage.getItem('rs_posts')||'[]'); all.splice(i,1); localStorage.setItem('rs_posts', JSON.stringify(all)); render(); }
+function copyHTML(i){
+  const p = JSON.parse(localStorage.getItem('rs_posts')||'[]')[i];
+  const html = `<!DOCTYPE html><html><head><title>${p.title}</title></head><body><h1>${p.title}</h1><p>${p.content}</p><p>Offer: ${p.offer}</p><a href="${p.link}">Visit Site</a></body></html>`;
+  navigator.clipboard.writeText(html); alert('HTML Copied!');
+}
+render();
+</script>
+</body>
+</html>
