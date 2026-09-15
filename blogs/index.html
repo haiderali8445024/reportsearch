@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Public Records Guides &amp; Insights — ReportSearch.online Blog</title>
+<title>Premium Blog — ReportSearch.online | By Devis Michael</title>
 <meta name="description" content="Expert guides on finding background checks, court records, police reports, property records and business filings legally. Updated weekly for the US, UK and Canada." />
 <meta name="keywords" content="public records guides, background check guide, court record search, police report request, property records, business filings" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -128,13 +128,8 @@ tailwind.config = {
   }
 </style>
 </head>
-
-<body class="bg-white font-sans text-ink antialiased">
-
-<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:z-[60] focus:left-4 focus:top-4 focus:rounded-xl focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white">Skip to content</a>
-
-<!-- ══════════════ NAVBAR (identical to homepage) ══════════════ -->
-<header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80" style="background:rgba(255,255,255,.92);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%)">
+<body class="bg-[#F8FAFC] text-ink font-sans antialiased">
+<header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80">
 <nav class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 lg:px-8" aria-label="Main">
     <a href="https://www.reportsearch.online" class="flex items-center gap-2 font-display text-[21px] font-extrabold tracking-tight text-ink">
       <span class="grid h-9 w-9 place-items-center rounded-xl bg-primary shadow-soft" aria-hidden="true">
@@ -147,7 +142,7 @@ tailwind.config = {
       <li><a href="https://www.reportsearch.online/pricing" class="link-underline hover:text-ink">Pricing</a></li>
       <li><a href="https://www.reportsearch.online#how" class="link-underline hover:text-ink">How it works</a></li>
       <li><a href="https://www.reportsearch.online/creditcheck" class="link-underline hover:text-ink">Credit Check</a></li>
-      <li><a href="https://www.reportsearch.online/blogs" class="font-semibold text-ink" aria-current="page">Blog</a></li>
+      <li><a href="https://www.reportsearch.online/blogs" class="link-underline hover:text-ink">Blog</a></li>
       <li><a href="https://www.reportsearch.online#contact" class="link-underline hover:text-ink">Contact</a></li>
     </ul>
     <div class="flex items-center gap-3">
@@ -160,396 +155,63 @@ tailwind.config = {
   <div id="mobileNav" class="hidden border-t border-slate-200 bg-white lg:hidden">
     <ul class="space-y-1 p-3 text-[15px] font-medium">
       <li><a class="block rounded-xl px-3 py-2.5 hover:bg-mist" href="https://www.reportsearch.online">Home</a></li>
-      <li><a class="block rounded-xl px-3 py-2.5 hover:bg-mist" href="https://www.reportsearch.online/pricing">Pricing</a></li>
+      <li><a class="block rounded-xl bg-mist px-3 py-2.5 font-semibold text-ink" href="https://www.reportsearch.online/pricing">Pricing</a></li>
       <li><a class="block rounded-xl px-3 py-2.5 hover:bg-mist" href="https://www.reportsearch.online#how">How it works</a></li>
       <li><a class="block rounded-xl px-3 py-2.5 hover:bg-mist" href="https://www.reportsearch.online/creditcheck">Credit Check</a></li>
-      <li><a class="block rounded-xl bg-mist px-3 py-2.5 font-semibold text-ink" href="https://www.reportsearch.online/blogs">Blog</a></li>
+      <li><a class="block rounded-xl px-3 py-2.5 hover:bg-mist" href="https://www.reportsearch.online/blogs">Blog</a></li>
       <li><a class="block rounded-xl px-3 py-2.5 hover:bg-mist" href="https://www.reportsearch.online#contact">Contact</a></li>
     </ul>
   </div>
 </header>
 
 
-<main id="main">
-
-<!-- ══════════════ 1. BLOG HERO ══════════════ -->
-<section class="mesh relative isolate overflow-hidden px-5 pb-14 pt-14 lg:px-8 lg:pb-16 lg:pt-16" style="background:linear-gradient(180deg,#EFF6FF 0%,#FFFFFF 78%)">
-  <div class="reveal mx-auto max-w-3xl text-center">
-    <span class="inline-flex items-center gap-2 rounded-full border border-success/25 bg-[#F0FDF4] px-4 py-1.5 text-[13.5px] font-semibold text-emerald-700">
-      <span aria-hidden="true">📚</span> Expert guides &amp; reports
-    </span>
-
-    <h1 class="mt-6 font-display text-[36px] font-extrabold leading-[1.07] tracking-[-.025em] text-ink sm:text-[48px] lg:text-[52px]">
-      Public records guides &amp; insights
-    </h1>
-
-    <p class="mx-auto mt-5 max-w-[56ch] text-[17.5px] leading-[1.65] text-slate-600">
-      Learn how to find background checks, court records and police reports legally. Updated weekly by experts.
-    </p>
-
-    <form class="mx-auto mt-9 flex max-w-xl flex-col gap-2.5 sm:flex-row" onsubmit="searchGuides(event)">
-      <label for="q" class="sr-only">Search guides</label>
-      <div class="relative flex-1">
-        <svg viewBox="0 0 24 24" class="pointer-events-none absolute left-4 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.6" y1="15.6" x2="20.5" y2="20.5"/></svg>
-        <input id="q" type="search" placeholder="Search guides..."
-               class="w-full rounded-xl2 border border-slate-200 bg-white py-4 pl-11 pr-4 text-[15.5px] text-ink shadow-soft placeholder:text-slate-400 focus:border-primary focus:outline-none" />
+<main>
+<!-- PREMIUM HERO -->
+<section class="relative overflow-hidden bg-white border-b border-slate-200/80">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute -top-24 -right-24 h-[700px] w-[700px] rounded-full bg-gradient-to-br from-blue-100 via-violet-100 to-transparent blur-[100px] opacity-70"></div>
+    <div class="absolute -bottom-32 -left-32 h-[600px] w-[600px] rounded-full bg-gradient-to-tr from-orange-50 via-blue-50 to-transparent blur-[100px] opacity-60"></div>
+  </div>
+  <div class="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 shadow-soft">
+        <span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-[11px] font-bold tracking-widest">PREMIUM GUIDES • BY DEVIS MICHAEL</span>
       </div>
-      <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl2 bg-primary px-7 py-4 font-display text-[16px] font-bold text-white shadow-lift transition hover:-translate-y-0.5 hover:bg-primary-700">
-        Search
-        <svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-      </button>
-    </form>
-    <p id="searchNote" class="mt-3 hidden text-[14px] font-medium text-slate-500"></p>
+      <h1 class="mt-6 font-display text-[36px] font-extrabold leading-[0.95] tracking-[-0.03em] lg:text-[58px]">Public Records <span class="bg-gradient-to-r from-primary to-violet-600 bg-clip-text text-transparent">Guides</span> That Actually Rank</h1>
+      <p class="mt-5 text-[17px] leading-relaxed text-slate-600">In-depth, affiliate-ready tutorials on background checks, criminal records, people search & global reports. Every post has its own shareable link.</p>
+      
+      <div class="mt-8 mx-auto flex max-w-[520px] flex-col gap-3 sm:flex-row">
+        <div class="relative flex-1">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"></circle><line x1="16" y1="16" x2="20" y2="20"></line></svg>
+          <input id="searchInput" placeholder="Search $1 trial, criminal, Texas..." class="h-[52px] w-full rounded-full border border-slate-200 bg-mist pl-11 pr-5 text-[15px] outline-none focus:border-primary focus:ring-4 focus:ring-primary/10">
+        </div>
+        <select id="catFilter" class="h-[52px] rounded-full border border-slate-200 bg-white px-6 text-[14px] font-semibold">
+          <option value="all">All Topics</option>
+          <option value="Background Check">Background Check</option>
+          <option value="Criminal Records">Criminal Records</option>
+          <option value="People Search">People Search</option>
+          <option value="Property">Property</option>
+          <option value="Global">Global</option>
+        </select>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ══════════════ 2. CATEGORY PILLS ══════════════ -->
-<nav aria-label="Guide categories" class="px-5 pb-10 lg:px-8">
-  <ul class="reveal mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-2.5">
-    <li><a href="#grid" class="inline-block rounded-full bg-primary px-5 py-2.5 text-[14.5px] font-semibold text-white shadow-soft" aria-current="page">All guides</a></li>
-    <li><a href="#grid" class="inline-block rounded-full border border-slate-200 bg-white px-5 py-2.5 text-[14.5px] font-semibold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">Background check</a></li>
-    <li><a href="#grid" class="inline-block rounded-full border border-slate-200 bg-white px-5 py-2.5 text-[14.5px] font-semibold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">Court records</a></li>
-    <li><a href="#grid" class="inline-block rounded-full border border-slate-200 bg-white px-5 py-2.5 text-[14.5px] font-semibold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">Police reports</a></li>
-    <li><a href="#grid" class="inline-block rounded-full border border-slate-200 bg-white px-5 py-2.5 text-[14.5px] font-semibold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">VIN reports</a></li>
-    <li><a href="#grid" class="inline-block rounded-full border border-slate-200 bg-white px-5 py-2.5 text-[14.5px] font-semibold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">Property records</a></li>
-    <li><a href="#grid" class="inline-block rounded-full border border-slate-200 bg-white px-5 py-2.5 text-[14.5px] font-semibold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">Business reports</a></li>
-  </ul>
-</nav>
-
-<!-- ══════════════ 3. AD SLOT — BLOG TOP ══════════════ -->
-<div class="mx-auto max-w-7xl px-5 pb-14 lg:px-8">
-  <div class="ad-slot ad-slot--leaderboard">ADSTERRA 728x90 — Blog Top</div>
-</div>
-
-<!-- ══════════════ 4. FEATURED POST ══════════════ -->
-<section class="px-5 pb-16 lg:px-8 lg:pb-20">
-  <article class="reveal mx-auto grid max-w-7xl items-stretch gap-0 overflow-hidden rounded-[20px] border border-slate-200/80 bg-white shadow-soft transition duration-300 hover:shadow-lift lg:grid-cols-2">
-    <div class="relative min-h-[280px] overflow-hidden lg:min-h-[420px]">
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80"
-           alt="A researcher reviewing public records on a laptop beside printed documents"
-           width="1000" height="840" loading="eager" decoding="async"
-           class="h-full w-full object-cover" onerror="imgFallback(this)" />
-      <span class="glass-badge absolute left-5 top-5 rounded-full px-3.5 py-1.5 text-[12.5px] font-bold text-primary shadow-glass">Featured guide</span>
-    </div>
-
-    <div class="flex flex-col justify-center p-8 lg:p-12">
-      <div class="flex flex-wrap items-center gap-3">
-        <span class="rounded-full bg-primary px-3 py-1 text-[12px] font-bold text-white">Background checks</span>
-        <time datetime="2026-09-12" class="text-[13.5px] font-medium text-slate-400">September 12, 2026 · 9 min read</time>
-      </div>
-
-      <h2 class="mt-4 font-display text-[28px] font-extrabold leading-[1.15] tracking-[-.02em] text-ink sm:text-[34px]">
-        The complete 2026 guide to running a legal background check
-      </h2>
-
-      <p class="mt-4 max-w-[54ch] text-[16.5px] leading-[1.7] text-slate-600">
-        Which checks you can run yourself, which ones legally require a licensed screening agency, and where the FCRA line sits. Includes the request order that gets you a complete file fastest, plus the three mistakes that get reports thrown out.
-      </p>
-
-      <div class="mt-8 flex flex-wrap items-center justify-between gap-5 border-t border-slate-100 pt-6">
-        <div class="flex items-center gap-3">
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="40" height="40" loading="lazy" class="h-10 w-10 rounded-full object-cover" onerror="imgFallback(this)" />
-          <div>
-            <p class="font-display text-[14.5px] font-bold text-ink">Daniel Reyes</p>
-            <p class="text-[13px] text-slate-500">Records researcher</p>
-          </div>
-        </div>
-        <a href="post.html" class="inline-flex items-center gap-1.5 font-display text-[15px] font-bold text-primary">
-          Read guide
-          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-    </div>
-  </article>
-</section>
-
-<!-- ══════════════ 5. BLOG GRID ══════════════ -->
-<section id="grid" class="px-5 pb-16 lg:px-8 lg:pb-20">
+<!-- BLOG GRID -->
+<section class="px-5 py-12 lg:px-8 lg:py-16">
   <div class="mx-auto max-w-7xl">
-    <div class="reveal flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-      <h2 class="font-display text-[30px] font-extrabold leading-[1.1] tracking-[-.02em] text-ink sm:text-[36px]">All guides</h2>
-      <p class="text-[15px] font-medium text-slate-500">Showing 9 of 64 guides</p>
+    <div id="featuredPost"></div>
+    <div id="articlesGrid" class="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <div id="emptyState" class="hidden py-24 text-center">
+      <div class="mx-auto grid h-20 w-20 place-items-center rounded-full bg-white border border-slate-200 text-[32px]">📝</div>
+      <h3 class="mt-4 font-display text-[20px] font-bold">No guides found</h3>
+      <p class="mt-2 text-slate-500">Try another keyword or publish from admin.</p>
     </div>
-
-    <div class="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-
-      <!-- Post 1 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=800&q=80" alt="Stack of legal documents beside a pen" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-primary shadow-glass">Background check</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">September 8, 2026 · 5 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">How to run a legal background check on yourself first</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">Seeing your own file before an employer does gives you time to dispute errors. Here's the request order that works.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Daniel Reyes</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Post 2 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift" style="--d:70ms">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?auto=format&fit=crop&w=800&q=80" alt="Courthouse entrance with stone steps" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-accent shadow-glass">Court records</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">September 2, 2026 · 6 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">Searching PACER without running up a bill</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">Federal dockets charge per page. Fee waivers, quarterly caps and the RECAP archive cover most of it.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Amara Whitfield</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Post 3 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift" style="--d:140ms">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?auto=format&fit=crop&w=800&q=80" alt="Police light bar at dusk" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-emerald-600 shadow-glass">Police reports</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">August 27, 2026 · 5 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">Requesting an accident report your insurer will accept</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">Adjusters need the certified copy, not the summary. The difference is one checkbox on the request form.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Marcus Hale</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- IN-GRID AD SLOT (after 3rd card) -->
-      <div class="reveal ad-slot ad-slot--rectangle rounded-xl2">ADSTERRA In-Grid 300x250</div>
-
-      <!-- Post 4 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Agent reviewing a property listing document" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-orange-600 shadow-glass">Property records</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">August 19, 2026 · 7 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">Find out who really owns a property in any US county</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">LLC on the deed? Assessor records, UCC filings and annual reports usually lead back to a human name.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Priya Raman</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Post 5 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift" style="--d:70ms">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Used car parked before inspection" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-violet2 shadow-glass">VIN reports</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">August 11, 2026 · 6 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">Free VIN checks: what they show and what they hide</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">NHTSA recalls and NICB theft checks cost nothing. Title washing and odometer rollbacks need NMVTIS.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Owen Traeger</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Post 6 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift" style="--d:140ms">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80" alt="Team reviewing company filings around a table" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-crimson shadow-glass">Business reports</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">August 4, 2026 · 5 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">Verify a company before you pay it: US, UK and Canada</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">Secretary of State, Companies House and Corporations Canada all publish filings free. Five minutes, three tabs.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Elena Marsh</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Post 7 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Completing a printed records request form" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-primary shadow-glass">Background check</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">July 29, 2026 · 8 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">FCRA basics every landlord should know before screening</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">Adverse action notices, permissible purpose and the paperwork that keeps a denial defensible.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Amara Whitfield</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Post 8 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift" style="--d:70ms">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Neoclassical courthouse columns" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-accent shadow-glass">Court records</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">July 22, 2026 · 6 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">Sealed, expunged or dismissed: what still shows up</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">State rules differ sharply. Here's what a county index keeps visible even after an order to seal.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Daniel Reyes</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-
-      <!-- Post 9 -->
-      <article class="reveal group flex flex-col overflow-hidden rounded-xl2 border border-[#E2E8F0] bg-white shadow-soft transition duration-300 hover:-translate-y-2 hover:shadow-lift" style="--d:140ms">
-        <div class="relative aspect-[16/9] overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Suburban family home viewed from the street" width="800" height="450" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.05]" onerror="imgFallback(this)" />
-          <span class="glass-badge absolute left-4 top-4 rounded-full px-3 py-1 text-[11.5px] font-bold text-orange-600 shadow-glass">Property records</span>
-        </div>
-        <div class="flex flex-1 flex-col p-6">
-          <p class="text-[13px] font-medium text-slate-400">July 15, 2026 · 5 min read</p>
-          <h3 class="mt-2 font-display text-[18px] font-bold leading-snug tracking-tight text-ink transition group-hover:text-primary">Reading a title search: liens, easements and clouds</h3>
-          <p class="clamp-2 mt-2.5 flex-1 text-[14px] leading-relaxed text-slate-600">A plain-English walkthrough of the four sections that decide whether a title is actually clear.</p>
-          <a href="post.html" class="mt-5 flex items-center justify-between border-t border-slate-100 pt-4">
-            <span class="flex items-center gap-2.5">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&h=96&q=80" alt="" width="32" height="32" loading="lazy" class="h-8 w-8 rounded-full object-cover" onerror="imgFallback(this)" />
-              <span class="text-[13.5px] font-semibold text-slate-600">Priya Raman</span>
-            </span>
-            <svg viewBox="0 0 24 24" class="h-[18px] w-[18px] text-primary transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-      </article>
-    </div>
-
-    <!-- ══════════════ 7. PAGINATION ══════════════ -->
-    <nav aria-label="Pagination" class="reveal mt-14 flex flex-wrap items-center justify-center gap-2.5">
-      <a href="#grid" class="inline-flex h-11 items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 font-display text-[14.5px] font-bold text-slate-400" aria-disabled="true">
-        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H6M11 18l-6-6 6-6"/></svg>
-        Previous
-      </a>
-      <a href="#grid" aria-current="page" class="grid h-11 w-11 place-items-center rounded-xl bg-primary font-display text-[15px] font-bold text-white shadow-soft">1</a>
-      <a href="#grid" class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 bg-white font-display text-[15px] font-bold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">2</a>
-      <a href="#grid" class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 bg-white font-display text-[15px] font-bold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">3</a>
-      <span class="grid h-11 w-11 place-items-center font-display text-[15px] font-bold text-slate-400">…</span>
-      <a href="#grid" class="grid h-11 w-11 place-items-center rounded-xl border border-slate-200 bg-white font-display text-[15px] font-bold text-slate-600 transition hover:-translate-y-0.5 hover:border-primary hover:text-primary">8</a>
-      <a href="#grid" class="inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-4 font-display text-[14.5px] font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-primary-700">
-        Next
-        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-      </a>
-    </nav>
   </div>
 </section>
-
-<!-- ══════════════ 6. WIDGETS ══════════════ -->
-<section class="border-t border-slate-200/80 bg-mist px-5 py-16 lg:px-8 lg:py-20">
-  <div class="mx-auto grid max-w-7xl gap-7 lg:grid-cols-3">
-
-    <!-- Popular posts -->
-    <div class="reveal rounded-xl2 border border-[#E2E8F0] bg-white p-7 shadow-soft">
-      <h2 class="font-display text-[19px] font-bold tracking-tight text-ink">Popular this month</h2>
-      <ol class="mt-6 grid gap-5">
-        <li>
-          <a href="post.html" class="group flex gap-4">
-            <span class="font-display text-[26px] font-extrabold leading-none text-primary/25">1</span>
-            <span>
-              <span class="block font-display text-[15px] font-bold leading-snug text-ink transition group-hover:text-primary">The complete 2026 guide to running a legal background check</span>
-              <span class="mt-1 block text-[13px] text-slate-400">9 min read</span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="post.html" class="group flex gap-4">
-            <span class="font-display text-[26px] font-extrabold leading-none text-primary/25">2</span>
-            <span>
-              <span class="block font-display text-[15px] font-bold leading-snug text-ink transition group-hover:text-primary">Searching PACER without running up a bill</span>
-              <span class="mt-1 block text-[13px] text-slate-400">6 min read</span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="post.html" class="group flex gap-4">
-            <span class="font-display text-[26px] font-extrabold leading-none text-primary/25">3</span>
-            <span>
-              <span class="block font-display text-[15px] font-bold leading-snug text-ink transition group-hover:text-primary">Find out who really owns a property in any US county</span>
-              <span class="mt-1 block text-[13px] text-slate-400">7 min read</span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="post.html" class="group flex gap-4">
-            <span class="font-display text-[26px] font-extrabold leading-none text-primary/25">4</span>
-            <span>
-              <span class="block font-display text-[15px] font-bold leading-snug text-ink transition group-hover:text-primary">Sealed, expunged or dismissed: what still shows up</span>
-              <span class="mt-1 block text-[13px] text-slate-400">6 min read</span>
-            </span>
-          </a>
-        </li>
-      </ol>
-    </div>
-
-    <!-- Newsletter (same gradient as homepage CTA) -->
-    <div class="reveal relative overflow-hidden rounded-xl2 p-8 shadow-lift" style="--d:90ms; background:linear-gradient(135deg,#2563EB 0%,#3B5BE0 45%,#4F46E5 100%)">
-      <div aria-hidden="true" class="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full bg-white/10 blur-2xl"></div>
-      <div class="relative">
-        <h2 class="font-display text-[23px] font-extrabold leading-tight tracking-tight text-white">Get report search tips</h2>
-        <p class="mt-3 text-[15px] leading-relaxed text-blue-50">One short email a month when agency forms or fees change. Unsubscribe any time.</p>
-        <form class="mt-6 grid gap-2.5" onsubmit="subscribe(event)">
-          <label for="email" class="sr-only">Email address</label>
-          <input id="email" type="email" required autocomplete="email" placeholder="you@example.com"
-                 class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-[15px] text-white placeholder:text-blue-100/70 focus:border-white focus:outline-none" />
-          <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 font-display text-[15px] font-extrabold text-primary transition hover:-translate-y-0.5 hover:bg-blue-50">
-            Subscribe
-            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
-          </button>
-        </form>
-        <p id="formNote" class="mt-3 hidden text-[13.5px] font-semibold text-white"></p>
-      </div>
-    </div>
-
-    <!-- Sidebar ad -->
-    <div class="reveal ad-slot ad-slot--rectangle rounded-xl2" style="--d:180ms">ADSTERRA Sidebar 300x250</div>
-  </div>
-</section>
-
 </main>
-
-<!-- ══════════════ FOOTER (identical to homepage) ══════════════ -->
 
 <footer class="border-t border-slate-200 bg-white">
   <div class="mx-auto max-w-7xl px-5 py-12 lg:px-8">
@@ -562,100 +224,86 @@ tailwind.config = {
         <a href="https://www.reportsearch.online" class="hover:text-ink">Home</a>
         <a href="https://www.reportsearch.online/pricing" class="hover:text-ink">Pricing</a>
         <a href="https://www.reportsearch.online#how" class="hover:text-ink">How it works</a>
-        <a href="https://www.reportsearch.online/creditcheck" class="hover:text-ink">Credit Check</a>
+        <a href="https://www.reportsearch.online#services" class="hover:text-ink">Services</a>
         <a href="https://www.reportsearch.online/blogs" class="font-semibold text-ink">Blog</a>
         <a href="#" class="hover:text-ink">Privacy</a>
         <a href="#" class="hover:text-ink">Terms</a>
       </nav>
     </div>
     <div class="mt-8 border-t border-slate-100 pt-8 flex flex-col gap-2 text-[13px] text-slate-500 lg:flex-row lg:justify-between">
-      <p>© 2026 ReportSearch.online. All rights reserved.</p>
+      <p>© 2026 ReportSearch.online. All rights reserved. This site is an affiliate site and may earn commission from purchases.</p>
       <p>We are not affiliated with any government agency. Guides only.</p>
     </div>
   </div>
 </footer>
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "ReportSearch.online Guides",
-  "url": "https://reportsearch.online/blog",
-  "description": "Expert guides to searching public records through official US, UK and Canadian sources.",
-  "publisher": { "@type": "Organization", "name": "ReportSearch.online" }
-}
-</script>
-
 <script>
-/* ── Image fallback (identical to homepage) ── */
-function imgFallback(img) {
-  if (img.dataset.failed) return;
-  img.dataset.failed = '1';
-  img.removeAttribute('srcset');
-  img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
-       <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-         <stop offset="0" stop-color="#EFF6FF"/><stop offset="1" stop-color="#E0E7FF"/>
-       </linearGradient></defs>
-       <rect width="800" height="450" fill="url(#g)"/>
-       <g fill="none" stroke="#2563EB" stroke-width="18" stroke-linecap="round" opacity=".45"
-          transform="translate(352,187)">
-         <circle cx="34" cy="34" r="34"/><line x1="60" y1="60" x2="92" y2="92"/>
-       </g>
-     </svg>`
-  );
+const defaultArticles = [
+  {id:'how-to-1-dollar-background-check',title:'How to Do Background Check for $1 in USA (2026 Full Guide)',desc:'Get full criminal, phone, address & email report for just $1 legally. Step-by-step with screenshots and affiliate CTA.',category:'Background Check',image:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80',content:'Full content here...',ctaText:'Start $1 Trial Now →',ctaLink:'https://www.reportsearch.online/pricing',date:'May 13, 2026',views:3421,author:'Devis Michael',read:'5 min read'},
+  {id:'texas-criminal-records-free',title:'Free Criminal Records Search in Texas: 3 Official Methods',desc:'Official county clerk portals to find Texas criminal records without paying third-party fees.',category:'Criminal Records',image:'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80',content:'Texas content...',ctaText:'Search Texas Records',ctaLink:'https://www.reportsearch.online/pricing',date:'May 12, 2026',views:1892,author:'Devis Michael',read:'4 min read'},
+  {id:'find-phone-number-legal',title:'How to Find Someone\'s Phone Number Legally in 2026',desc:'Reverse phone lookup methods that comply with FCRA. Works for USA & UK.',category:'People Search',image:'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',content:'Phone content...',ctaText:'Find Phone Number - $1',ctaLink:'https://www.reportsearch.online/pricing',date:'May 11, 2026',views:2105,author:'Devis Michael',read:'6 min read'},
+  {id:'property-owner-lookup-free',title:'How to Find Property Owner Free: Deeds & Tax Records Guide',desc:'County recorder & assessor free search for owner, liens, sale history.',category:'Property',image:'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80',content:'Property...',ctaText:'Find Owner Now',ctaLink:'https://www.reportsearch.online/pricing',date:'May 10, 2026',views:1650,author:'Devis Michael',read:'5 min read'},
+  {id:'global-people-search-195-countries',title:'Global People Search: 195 Countries Covered (Ultimate 2026)',desc:'How to search people outside USA - UK, Canada, Australia & 195+ countries with one report.',category:'Global',image:'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80',content:'Global...',ctaText:'Search Global - $40',ctaLink:'https://www.reportsearch.online/pricing',date:'May 09, 2026',views:2980,author:'Devis Michael',read:'7 min read'}
+];
+
+function getArticles(){ const s=localStorage.getItem('rs_articles'); if(s){try{return JSON.parse(s)}catch(e){return defaultArticles}} return defaultArticles; }
+
+function render(){
+  const articles=getArticles();
+  const q=document.getElementById('searchInput').value.toLowerCase();
+  const cat=document.getElementById('catFilter').value;
+  let filtered=articles.filter(a=>{ const mq=a.title.toLowerCase().includes(q)||a.desc.toLowerCase().includes(q); const mc=cat==='all'||a.category===cat; return mq&&mc; });
+  const grid=document.getElementById('articlesGrid');
+  const feat=document.getElementById('featuredPost');
+  if(filtered.length===0){ grid.innerHTML=''; feat.innerHTML=''; document.getElementById('emptyState').classList.remove('hidden'); return; }
+  document.getElementById('emptyState').classList.add('hidden');
+  const first=filtered[0];
+  feat.innerHTML=`
+    <a href="post.html?id=${first.id}" class="group flex flex-col overflow-hidden rounded-[22px] border border-slate-200/80 bg-white shadow-soft transition duration-300 hover:-translate-y-1.5 hover:shadow-lift lg:flex-row">
+      <div class="relative lg:w-[58%] h-[280px] lg:h-[420px] overflow-hidden bg-slate-100">
+        <img src="${first.image}" alt="" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]">
+        <div class="absolute left-4 top-4 flex gap-2">
+          <span class="rounded-full bg-white px-3.5 py-1.5 text-[11px] font-bold tracking-widest shadow-soft">FEATURED</span>
+          <span class="rounded-full bg-ink text-white px-3.5 py-1.5 text-[11px] font-bold tracking-widest">${first.category.toUpperCase()}</span>
+        </div>
+      </div>
+      <div class="flex flex-1 flex-col p-7 lg:p-10">
+        <div class="flex items-center gap-2 text-[12px] text-slate-500"><span>${first.date}</span><span class="h-1 w-1 rounded-full bg-slate-300"></span><span>${first.read}</span><span class="h-1 w-1 rounded-full bg-slate-300"></span><span>👁 ${first.views}</span></div>
+        <h2 class="mt-4 font-display text-[24px] font-extrabold leading-[1.1] tracking-tight lg:text-[32px] group-hover:text-primary transition">${first.title}</h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-slate-600 line-clamp-3">${first.desc}</p>
+        <div class="mt-auto flex items-center justify-between pt-8">
+          <div class="flex items-center gap-2.5"><div class="grid h-9 w-9 place-items-center rounded-full bg-ink text-white text-[12px] font-bold">DM</div><div><div class="text-[13px] font-bold leading-none">${first.author}</div><div class="text-[11px] text-slate-500">Author</div></div></div>
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-ink px-5 py-2.5 text-[13px] font-bold text-white transition group-hover:bg-primary">${first.ctaText} <span>→</span></span>
+        </div>
+      </div>
+    </a>`;
+
+  const rest=filtered.slice(1);
+  grid.innerHTML=rest.map(a=>`
+    <a href="post.html?id=${a.id}" class="group flex flex-col overflow-hidden rounded-[20px] border border-slate-200/80 bg-white shadow-soft transition duration-300 hover:-translate-y-1.5 hover:border-primary/20 hover:shadow-lift">
+      <div class="relative h-[200px] overflow-hidden bg-slate-100">
+        <img src="${a.image}" class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]" alt="">
+        <div class="absolute left-3 top-3 rounded-full bg-white/90 backdrop-blur px-3 py-1 text-[10px] font-bold tracking-widest">${a.category.toUpperCase()}</div>
+        <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between"><span class="rounded-full bg-black/60 backdrop-blur px-2.5 py-1 text-[11px] font-medium text-white">${a.date}</span><span class="rounded-full bg-white px-2.5 py-1 text-[11px] font-bold">👁 ${a.views}</span></div>
+      </div>
+      <div class="flex flex-1 flex-col p-6">
+        <h3 class="font-display text-[18px] font-bold leading-[1.25] tracking-tight group-hover:text-primary transition line-clamp-2">${a.title}</h3>
+        <p class="mt-2.5 text-[13.5px] leading-relaxed text-slate-600 line-clamp-2">${a.desc}</p>
+        <div class="mt-auto flex items-center justify-between pt-5"><div class="flex items-center gap-2"><div class="grid h-7 w-7 place-items-center rounded-full bg-slate-100 text-[10px] font-bold">DM</div><span class="text-[12px] font-semibold text-slate-600">${a.author}</span></div><span class="text-[12px] font-bold">Read →</span></div>
+      </div>
+    </a>
+  `).join('');
 }
 
-/* ── Mobile nav ── */
-(function () {
-  const btn = document.getElementById('navToggle');
-  const panel = document.getElementById('mobileNav');
-  btn.addEventListener('click', () => {
-    const open = panel.classList.toggle('hidden') === false;
-    btn.setAttribute('aria-expanded', String(open));
-    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-  });
-  panel.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') {
-      panel.classList.add('hidden');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
+document.getElementById('searchInput').addEventListener('input',render);
+document.getElementById('catFilter').addEventListener('change',render);
 
-/* ── Scroll reveal ── */
-(function () {
-  const items = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) ||
-      window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    items.forEach((el) => el.classList.add('is-in'));
-    return;
-  }
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); }
-    });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
-  items.forEach((el) => io.observe(el));
-})();
+// mobile nav toggle
+const t=document.getElementById('navToggle'); const m=document.getElementById('mobileNav');
+if(t&&m){ t.addEventListener('click',()=>{ const o=m.classList.contains('hidden'); m.classList.toggle('hidden',!o); t.setAttribute('aria-expanded', String(o)); }); }
 
-/* ── Search (front-end only; wire to your search backend) ── */
-function searchGuides(e) {
-  e.preventDefault();
-  const q = document.getElementById('q').value.trim();
-  const note = document.getElementById('searchNote');
-  note.textContent = q ? `Searching guides for “${q}” — connect this form to your search endpoint.` : 'Type a keyword to search the guides.';
-  note.classList.remove('hidden');
-}
-
-/* ── Newsletter (front-end only) ── */
-function subscribe(e) {
-  e.preventDefault();
-  const note = document.getElementById('formNote');
-  if (note) { note.textContent = "You're on the list. Check your inbox to confirm."; note.classList.remove('hidden'); }
-  e.target.reset();
-}
+render();
 </script>
 </body>
 </html>
